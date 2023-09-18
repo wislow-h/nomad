@@ -51,4 +51,9 @@ def export():
   return send_file(f"{search_keyword}.csv", as_attachment=True)
 
 
+@app.route("/bot")
+def bot():
+  return "this is a page for bots to check the server."
+
+
 app.run("0.0.0.0")
