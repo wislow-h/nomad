@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">  <title>Search</title>
+</head>
+<body>
+  <main class="container">
+    <hgroup>
+      <h2>Search Result</h2>
+      <h3>Result of "{{keyword}}" Jobs</h3>
+      <a href="/export?keyword={{keyword}}" target="_blank">export</a>
+    </hgroup>
+    <figure>
+      <table>
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for job in jobs %}
+          <tr>
+            <td>{{job.title}}</td>
+            <td>{{job.company}}</td>
+            <td>{{job.region}}</td>
+            <td><a href="{{job.link}}" target="_blank">go to details</a></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </figure>
+  </main>
+</body>
+</html>
