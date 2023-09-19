@@ -5,6 +5,7 @@
     pkgs.replitPackages.stderred
     pkgs.chromedriver
     pkgs.chromium
+    pkgs.python39Packages.flask
   ];
   env = {
     PYTHON_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
